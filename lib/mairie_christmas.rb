@@ -30,7 +30,7 @@ def get_townhall_email(townhall_url)
 	email = page.xpath('//*[contains(text(), "@")]').text
 	email_array << email
 	
-  p email_array[0] # https://stackoverflow.com/questions/15784503/ruby-method-to-print-and-neat-an-array
+  p email_array.join(',') # https://stackoverflow.com/questions/15784503/ruby-method-to-print-and-neat-an-array
 	return email_array
 end
 # pour tester faire par exemple >>> get_townhall_email("https://www.annuaire-des-mairies.com/95/ableiges.html")
